@@ -1,0 +1,7 @@
+---
+- name: Developer Station Setup
+  hosts: localhost
+  connection: local
+  tasks:
+  - include: tasks/zsh.yml
+  - include: tasks/tmux.yml
