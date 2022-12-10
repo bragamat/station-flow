@@ -13,6 +13,7 @@ fits you well!
 * [Zsh](https://www.zsh.org/)
 * [OhMyZsh](https://ohmyz.sh/)
 * [Tmux](https://github.com/tmux/tmux)
+* [Vim](https://www.vim.org/)
 * [Ansible](https://github.com/ansible/ansible)
 
 

@@ -5,3 +5,4 @@
   tasks:
   - include: tasks/zsh.yml
   - include: tasks/tmux.yml
+  - include: tasks/vim.yml
