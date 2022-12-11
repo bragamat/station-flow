@@ -1,5 +1,14 @@
 ---
 - name: Install Tmux
-  apt: name=tmux
+  when: ansible_distribution == 'Ubuntu'
+  include_tasks: file=./apt/tmux.yml
   tags:
     - tmux
+    - linux
+
+- name: Install Tmux
+  when: ansible_distribution == 'Darwin'
+  include_tasks: file=./brew/tmux.yml
+  tags:
+    - tmux
+    - homebrew

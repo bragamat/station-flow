@@ -1,0 +1,5 @@
+---
+- name: Install Vim
+  apt: name=vim
+  tags:
+    - vim

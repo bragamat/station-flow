@@ -1,5 +1,14 @@
 ---
-- name: Install Vim
-  apt: name=vim
+- name: Install Tmux
+  when: ansible_distribution == 'Ubuntu'
+  include_tasks: file=./apt/vim.yml
   tags:
-    - vim
+    - tmux
+    - linux
+
+- name: Install Tmux
+  include_tasks: file=./brew/vim.yml
+  when: ansible_distribution == 'Darwin'
+  tags:
+    - tmux
+    - homebrew

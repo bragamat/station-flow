@@ -3,6 +3,6 @@
   hosts: localhost
   connection: local
   tasks:
-  - include: tasks/zsh.yml
-  - include: tasks/tmux.yml
-  - include: tasks/vim.yml
+  - include: file=./tasks/zsh.yml
+  - include: file=./tasks/tmux.yml
+  - include: file=./tasks/vim.yml
