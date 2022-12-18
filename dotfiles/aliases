@@ -55,9 +55,10 @@ alias gpso='git push origin HEAD'
 alias gpforce='git push origin HEAD --force-with-lease'
 
 # docker
-alias dc="docker"
+alias d="docker"
+alias dc="docker-compose"
 alias dprune="docker system prune"
-alias dcp="docker-compose"
+alias dclean="docker stop \$(docker ps -aq) && docker rm \$(docker ps -aq)"
 
 # Common shell functions
 alias cl='clear'
@@ -81,6 +82,15 @@ then
   alias ls='ls --color=auto'
   alias mykey="cat $HOME/.ssh/id_rsa.pub | xclip -i -selection clipboard"
 fi
+
+alias cbt='cd ~/workspace/clearbit'
+alias gco='git checkout'
+alias gcm='git checkout main'
+alias gcmaster='git checkout master'
+alias grmhard='git reset origin/main --hard'
+alias grmasterhard='git reset origin/master --hard'
+alias k='kubectl'
+
 
 # your aliases
 [[ -f $HOME/.aliases.local ]] && source $HOME/.aliases.local
