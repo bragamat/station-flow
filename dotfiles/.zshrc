@@ -2,6 +2,10 @@ setopt promptsubst
 
 # load our own completion functions
 fpath=(~/.zsh/completion /usr/local/share/zsh/site-functions $fpath)
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# accept suggestion pressing ESC key
+# binding to ctrl+<space> key because TAB messesup with other tab functionalities
+bindkey '^ ' autosuggest-accept
 
 # completion
 autoload -U compinit
